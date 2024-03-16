@@ -32,11 +32,11 @@ function fireworks() {
         createEmoji.style.left = `${Math.floor(Math.random() * docWidth)}px`
         createEmoji.style.transform = `scale(${(Math.random() * 2) + 1})`
         document.body.appendChild(createEmoji)
-        createEmoji.style.animation = "fadeDrop 750ms linear forwards"
+        createEmoji.style.animation = "fadeDrop 1500ms linear forwards"
     }, 10);
     setTimeout(() => {
         clearInterval(count)
-    }, 1000)
+    }, 2000)
 }
 
 
