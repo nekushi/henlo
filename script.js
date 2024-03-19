@@ -15,11 +15,12 @@ function lowerMainBox() {
     mainBox.style.top = "90%"
 }
 function doMagic() {
-    h2.innerText = "Hello world"
+    h2.innerHTML = "Happy Birthday <span style='color: #44B6A6;'>P<i class='fa-solid fa-heart'></i></span>"
     h2.style.animation = "popUp 1000ms ease-in-out forwards"
 }
 function fireworks() {
     let count = setInterval(() => {
+        mainBox.style.animation = "bounce 3000ms ease-in-out 1500ms infinite"
         const emojis = ["🥳", "💜", "🩷", "🎉", "🎈", "🎊", "🎁"]
         let docWidth = window.innerWidth - 35
         let docHeight = window.innerHeight - 72
@@ -64,35 +65,6 @@ function speakNow() {
 function throwEmojis() {
     return new Promise((resolve, reject) => {
         resolve(fireworks())
-    //     let count = setInterval(() => {
-    //         const emojis = ["🥳", "💜", "🩷", "🎉", "🎈", "🎊", "🎁"]
-    //         let docWidth = window.innerWidth - 32
-    //         let docHeight = window.innerHeight - 32
-    
-    //         const createEmoji = document.createElement("div")
-    //         createEmoji.classList.add("emoji")
-    //         let randNum = Math.floor(Math.random() * emojis.length)
-    //         createEmoji.innerText = `${emojis[randNum]}`
-    //         createEmoji.style.top = `${Math.floor(Math.random() * docHeight)}px`
-    //         createEmoji.style.left = `${Math.floor(Math.random() * docWidth)}px`
-    //         createEmoji.style.transform = `scale(${(Math.random() * 1) + 1})`
-    //         document.body.appendChild(createEmoji)
-    //     }, 20);
-    //     setTimeout(() => {
-    //         // for (let i = 0; i < divEmoji.length; ++i) {
-    //         //     divEmoji[i].style.transform = "translateY(50px)"
-    //         //     divEmoji[i].style.animation = "fadeDrop 300ms linear forwards"
-    //         // }
-    //         // divEmoji.forEach(x => {
-    //         //     x.style.transform = "translateY(50px)"
-    //         //     x.style.animation = "fadeDrop 300ms linear forwards"
-    //         // })
-    //         clearInterval(count)
-    //     }, 1000)
-    //     divEmoji.forEach(x => {
-    //         x.style.transform = "translateY(50px)"
-    //         x.style.animation = "fadeDrop 300ms linear forwards"
-    //     })
     })
 }
 
